@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Adopción de gatos</title>
+  <link href="estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <h1>Adopción de gatos</h1>
+  <p>A continuación te presentamos nuestros gatos disponibles para adopción:</p>
+  <div class="card-container">
+    <div class="card">
+      <img src="images/foto.jpg" alt="Foto de Pelusa">
+      <h2>Pelusa</h2>
+      <p>Pelusa es una gata de 2 años de edad. Es muy tranquila y amorosa, le gusta dormir y acurrucarse en el regazo de sus dueños. También le encanta jugar con juguetes de plumas y pelotas pequeñas.</p>
+    </div>
+    <div class="card">
+      <img src="images/foto.jpg" alt="Foto de Pelusa">
+      <h2>Tito</h2>
+      <p>Tito es un gato de 3 años de edad. Es un poco tímido al principio, pero una vez que toma confianza es muy cariñoso. Le encanta perseguir juguetes y es muy curioso.</p>
+    </div>
+    <div class="card">
+      <img src="images/foto.jpg" alt="Foto de Pelusa">
+      <h2>Luna</h2>
+      <p>Luna es una gata de 1 año de edad. Es muy activa y juguetona, le encanta correr y saltar. También es muy cariñosa y le gusta que le rasquen detrás de las orejas.</p>
+    </div>
+    <div class="card">
+      <img src="images/foto.jpg" alt="Foto de Pelusa">
+      <h2>Simba</h2>
+      <p>Simba es un gato de 4 años de edad. Es muy sociable y le encanta estar con personas. Es un poco perezoso, pero le gusta jugar con juguetes suaves.</p>
+    </div>
+    <div class="card">
+      <img src="images/foto.jpg" alt="Foto de Pelusa">
+      <h2>Mimi</h2>
+      <p>Mimi es una gata de 2 años de edad. Es muy dulce y le encanta que le den atención. Es muy juguetona y le gusta correr por toda la casa.</p>
+    </div>
+    <div class="card">
+      <img src="images/foto.jpg" alt="Foto de Venusis">
+      <h2>Venusis</h2>
+      <p>Venusis es una gata de 1 años de edad. Es muy dulce y le encanta que le den atención. Es muy juguetona y le gusta correr por toda la casa.</p>
+    </div>
+  </div>
+  <form action="procesar-adopcion.php" method="post">
+    <h2>Solicitud de adopción</h2>
+    <label for="nombre-completo">Nombre completo:</label>
+    <input type="text" id="nombre-completo" name="nombre-completo" required><br>
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required><br>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required><br>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="gato">¿Qué gato te gustaría adoptar?</label>
+    <select id="gato" name="gato" required>
+      <option value="Pelusa">Pelusa</option>
+      <option value="Tito">Tito</option>
+      <option value="Luna">Luna</option>
+      <option value="Simba">Simba</option>
+      <option value="Mimi">Mimi</option>
+    </select><br>
+    <label for="razon">¿Por qué te gustaría adoptar a este gato?</label>
+    <textarea id="razon" name="razon" rows="4" cols="40" required></textarea><br>
