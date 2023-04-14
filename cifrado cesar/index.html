@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cifrado César</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="cripto.js"></script>
+  </head>
+  <body>
+    <h1>Cifrado César</h1>
+    <form>
+      <label for="input-text">Texto:</label><br>
+      <textarea id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
+      <label for="shift">Desplazamiento:</label><br>
+      <input type="number" id="shift" name="shift" value="0" min="0" max="25"><br>
+      <br>
+      <button type="button" onclick="handleEncrypt()">Encriptar</button>
+      <button type="button" onclick="handleDecrypt()">Desencriptar</button>
+      <br>
+      <br>
+      <label for="output-text">Resultado:</label><br>
+      <textarea id="output-text" name="output-text" rows="5" cols="50" readonly></textarea>
+    </form>
+  </body>
+</html>
