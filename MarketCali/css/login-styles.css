@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center; /* Centrar verticalmente */
     align-items: center; /* Centrar horizontalmente */
-    height: 45vh; /* Ajustamos la altura de la carta para que ocupe toda la altura de la pantalla */
+    height: 50vh; /* Ajustamos la altura de la carta para que ocupe toda la altura de la pantalla */
 }
 
 .login-form .card-body {
