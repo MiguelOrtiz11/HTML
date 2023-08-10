@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Practica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tu Portafolio</title>
 </head>
 <body>
-    
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="hero">
+    <h1>Juan Pérez</h1>
+    <p>Desarrollador Web</p>
+    <a href="#contact" class="cta-button">Contáctame</a>
+  </section>
+  
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un apasionado desarrollador web con experiencia en creación de sitios web modernos y atractivos. Mi objetivo es combinar diseño y funcionalidad para ofrecer experiencias en línea excepcionales.</p>
+  </section>
+  
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="project">
+      <img src="project1.jpg" alt="Proyecto 1">
+      <h3>Sitio Web de Moda</h3>
+      <p>Un sitio web interactivo para una tienda en línea de ropa de moda.</p>
+      <a href="proyecto1.html">Ver Detalles</a>
+    </div>
+    <div class="project">
+      <img src="project2.jpg" alt="Proyecto 2">
+      <h3>App de Ejercicios</h3>
+      <p>Una aplicación de seguimiento de ejercicios para dispositivos móviles.</p>
+      <a href="proyecto2.html">Ver Detalles</a>
+    </div>
+    <!-- Agrega más proyectos aquí -->
+  </section>
+  
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>¡Hablemos sobre tu próximo proyecto! Puedes contactarme en:</p>
+    <a href="mailto:juan@example.com">juan@example.com</a>
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/juanperez" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="https://www.twitter.com/juanperez" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Juan Pérez</p>
+  </footer>
 </body>
 </html>
