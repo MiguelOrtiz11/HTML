@@ -25,7 +25,10 @@
             <h1>Certificaciones</h1>
             <input type="text" id="buscador" placeholder="Buscar certificación">
         </div>
-        <div id="certificacionesContainer"></div>
+        <div class="certificaciones-grid">
+            <div id="certificacionesContainer"></div>
+        </div>
+
     </div>
 
     <footer>
@@ -38,51 +41,41 @@
 
         // Ejemplo de datos de certificaciones (puedes reemplazarlo con datos reales)
         const certificaciones = [
-            { nombre: 'asd', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            { nombre: 'dssd 1', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            { nombre: 'asd', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            { nombre: 'dssd 1', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-
-            { nombre: 'sdf 1', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            { nombre: 'asd', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            { nombre: 'dssd 1', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-
-            { nombre: 'sdf 1', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            
-            { nombre: 'sdf 1', archivo: 'Aprendizaje virtual - Colegio Piaget.jpg' },
-            // Agregar más certificaciones aquí
+            { nombre: 'Certificado 1', archivo: '#' },
+            { nombre: 'Certificado 1', archivo: '#' },
+            { nombre: 'Certificado 1', archivo: '#' },
         ];
 
         // Función para mostrar certificaciones
         function mostrarCertificaciones(certificaciones) {
-    certificacionesContainer.innerHTML = '';
-    const busqueda = buscador.value.toLowerCase();
+            certificacionesContainer.innerHTML = '';
+            const busqueda = buscador.value.toLowerCase();
 
-    for (const certificacion of certificaciones) {
-        const nombreCertificacion = certificacion.nombre.toLowerCase(); // Convertir a minúsculas
+            for (const certificacion of certificaciones) {
+                const nombreCertificacion = certificacion.nombre.toLowerCase(); // Convertir a minúsculas
 
-        if (nombreCertificacion.includes(busqueda)) {
-            const certificacionDiv = document.createElement('div');
-            certificacionDiv.className = 'certificacion';
+                if (nombreCertificacion.includes(busqueda)) {
+                    const certificacionDiv = document.createElement('div');
+                    certificacionDiv.className = 'certificacion';
 
-            if (certificacion.archivo.endsWith('.pdf')) {
-                certificacionDiv.innerHTML = `
+                    if (certificacion.archivo.endsWith('.pdf')) {
+                        certificacionDiv.innerHTML = `
                     <a href="${certificacion.archivo}" target="_blank">
                     <img src="pdf-icon.png" alt="PDF">
                     <p>${certificacion.nombre}</p>
                     </a>`;
-            } else if (certificacion.archivo.endsWith('.jpg') || certificacion.archivo.endsWith('.png')) {
-                certificacionDiv.innerHTML = `
+                    } else if (certificacion.archivo.endsWith('.jpg') || certificacion.archivo.endsWith('.png')) {
+                        certificacionDiv.innerHTML = `
                     <a href="${certificacion.archivo}" target="_blank">
                     <img src="${certificacion.archivo}" alt="Imagen">
                     <p>${certificacion.nombre}</p>
                     </a>`;
-            }
+                    }
 
-            certificacionesContainer.appendChild(certificacionDiv);
+                    certificacionesContainer.appendChild(certificacionDiv);
+                }
+            }
         }
-    }
-}
 
 
         buscador.addEventListener('input', () => {

@@ -5,7 +5,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    margin: 20px; /* Margen alrededor de la página */
+    margin: 20px;
+    /* Margen alrededor de la página */
 }
 
 a {
@@ -144,23 +145,31 @@ footer {
 
 /* Estilos adicionales para la galería */
 .certificaciones-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cambio aquí */
-    gap: 20px;
-    justify-items: center; /* Agregado para centrar las imágenes horizontalmente */
+    justify-items: center; /* Centra horizontalmente */
 }
+
+
 .certificacion {
     text-align: center;
-    display: inline-block; /* Agregado para ajustar el tamaño del div a la imagen */
 }
+
+.certificacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
 .certificacion img {
-    width: 100%; /* Cambiado a width */
+    max-width: 100%;
     max-height: 150px; /* Altura fija para todas las imágenes */
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .certificacion:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
