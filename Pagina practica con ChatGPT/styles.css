@@ -5,8 +5,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    margin: 20px;
-    /* Margen alrededor de la página */
+    margin: 20px; /* Margen alrededor de la página */
 }
 
 a {
@@ -143,14 +142,26 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Estilos adicionales para certificaciones.html */
-.certificacion {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
+/* Estilos adicionales para la galería */
+.certificaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cambio aquí */
+    gap: 20px;
+    justify-items: center; /* Agregado para centrar las imágenes horizontalmente */
 }
-
+.certificacion {
+    text-align: center;
+    display: inline-block; /* Agregado para ajustar el tamaño del div a la imagen */
+}
 .certificacion img {
-    max-width: 200px;
-    max-height: 200px;
+    width: 100%; /* Cambiado a width */
+    max-height: 150px; /* Altura fija para todas las imágenes */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
