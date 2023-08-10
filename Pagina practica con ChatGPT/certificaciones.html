@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="center-content"></div>
+        <h1>Certificaciones</h1>
+        <input type="text" id="buscador" placeholder="Buscar certificación">
+    </div>
+    <div id="certificacionesContainer"></div>
+    </div>
+
+    <footer>
+        <p>&copy; Miguel Angel Ortiz</p>
+    </footer>
+
+    <script>
+        const certificacionesContainer = document.getElementById('certificacionesContainer');
+        const buscador = document.getElementById('buscador');
+
+        // Ejemplo de datos de certificaciones (puedes reemplazarlo con datos reales)
+        const certificaciones = [
+            { nombre: 'Certificación 1', archivo: 'certificacion1.pdf' },
+            { nombre: 'Certificación 2', archivo: 'certificacion2.jpg' },
+            // Agregar más certificaciones aquí
+        ];
+
+        // Función para mostrar certificaciones
+        function mostrarCertificaciones(certificaciones) {
+            certificacionesContainer.innerHTML = '';
+            const busqueda = buscador.value.toLowerCase();
+
+            for (const certificacion of certificaciones) {
+                if (certificacion.nombre.toLowerCase().includes(busqueda)) {
+                    const certificacionDiv = document.createElement('div');
+                    certificacionDiv.className = 'certificacion';
+
+                    if (certificacion.archivo.endsWith('.pdf')) {
+                        certificacionDiv.innerHTML = `
+                            <a href="${certificacion.archivo}" target="_blank">
+                            <img src="pdf-icon.png" alt="PDF">
+                            <p>${certificacion.nombre}</p>
+                            </a>`;
+                    } else if (certificacion.archivo.endsWith('.jpg') || certificacion.archivo.endsWith('.png')) {
+                        certificacionDiv.innerHTML = `
+                            <a href="${certificacion.archivo}" target="_blank">
+                            <img src="${certificacion.archivo}" alt="Imagen">
+                            <p>${certificacion.nombre}</p>
+                            </a>`;
+                    }
+
+                    certificacionesContainer.appendChild(certificacionDiv);
+                }
+            }
+        }
+
+        buscador.addEventListener('input', () => {
+            mostrarCertificaciones(certificaciones);
+        });
+
+        // Mostrar todas las certificaciones al cargar la página
+        mostrarCertificaciones(certificaciones);
+    </script>
+</body>
+
+</html>
